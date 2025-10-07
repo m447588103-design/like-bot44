@@ -141,8 +141,8 @@ class LikeCommands(commands.Cog):
                     else:
                         embed.description = "This UID has already received the maximum likes today.\nPlease wait 24 hours and try again"
 
-                    embed.set_footer(text="DEVELOPED BY JOY!")
-                    embed.description += "\n🔗 JOIN : WITH US!
+                    embed.set_footer(text="DEVELOPED BY JOY")
+                    
                     await ctx.send(embed=embed, mention_author=True, ephemeral=is_slash)
 
         except asyncio.TimeoutError:

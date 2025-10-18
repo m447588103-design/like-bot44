@@ -1,3 +1,4 @@
+
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -141,7 +142,7 @@ class LikeCommands(commands.Cog):
                     else:
                         embed.description = "This UID has already received the maximum likes today.\nPlease wait 24 hours and try again"
 
-                    embed.set_footer(text="DEVELOPED BY JOY")
+                    embed.set_footer(text="আমাদের সাথে থাকার জন্য আপনাকে ধন্যবাদ।")
                     
                     await ctx.send(embed=embed, mention_author=True, ephemeral=is_slash)
 
@@ -149,7 +150,7 @@ class LikeCommands(commands.Cog):
             await self._send_error_embed(ctx, "Timeout", "The server took too long to respond.", ephemeral=is_slash)
         except Exception as e:
             print(f"Unexpected error in like_command: {e}")
-            await self._send_error_embed(ctx, "Critical Error", "An unexpected error occurred. Please try again later.", ephemeral=is_slash)
+            await self._send_error_embed(ctx, "Critical Error", "চিন্তা করবেন না , কোনো সমস্যা হলে এডমিন কে dm করুন , ধন্যবাদ ", ephemeral=is_slash)
 
     async def _send_player_not_found(self, ctx, uid):
         embed = discord.Embed(title="Player Not Found", description=f"The UID {uid} does not exist or is not accessible.", color=0xE74C3C)
@@ -157,7 +158,7 @@ class LikeCommands(commands.Cog):
         await ctx.send(embed=embed, ephemeral=True)
         
     async def _send_api_error(self, ctx):
-        embed = discord.Embed(title="⚠️ Service Unavailable", description="The Free Fire API is not responding at the moment.", color=0xF39C12)
+        embed = discord.Embed(title="⚠️ Service Unavailable", description="দয়া করে অপেক্ষা  করেন জয় ভাই ঠিক করবে , চিন্তা করবেন  নাহ .", color=0xF39C12)
         embed.add_field(name="Solution", value="Try again in a few minutes.", inline=False)
         await ctx.send(embed=embed, ephemeral=True)
 

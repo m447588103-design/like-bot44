@@ -131,16 +131,16 @@ class LikeCommands(commands.Cog):
                     if data.get("status") == 1:
                         embed.description = (
                             f"\n"
-                            f"┌  ACCOUNT\n"
-                            f"├─ NICKNAME: {data.get('player', 'Unknown')}\n"
+                            f"┌  হিসাব\n"
+                            f"├─ ডাকনাম : {data.get('player', 'Unknown')}\n"
                             f"├─ UID: {uid}\n"
-                            f"└─ RESULT:\n"
-                            f"   ├─ ADDED: +{data.get('likes_added', 0)}\n"
-                            f"   ├─ BEFORE: {data.get('likes_before', 'N/A')}\n"
-                            f"   └─ AFTER: {data.get('likes_after', 'N/A')}\n"
+                            f"└─ ফলাফল :\n"
+                            f"   ├─ যোগ করা হয়েছে: +{data.get('likes_added', 0)}\n"
+                            f"   ├─ আগে: {data.get('likes_before', 'N/A')}\n"
+                            f"   └─ পরবর্তী: {data.get('likes_after', 'N/A')}\n"
                         )
                     else:
-                        embed.description = "This UID has already received the maximum likes today.\nPlease wait 24 hours and try again"
+                        embed.description = "এই UID আজ সর্বাধিক লাইক পেয়েছে।.\nঅনুগ্রহ করে ২৪ ঘন্টা অপেক্ষা করুন এবং আবার চেষ্টা করুন।"
 
                     embed.set_footer(text="আমাদের সাথে থাকার জন্য আপনাকে ধন্যবাদ।")
                     

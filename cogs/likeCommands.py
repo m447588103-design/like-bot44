@@ -1,4 +1,5 @@
 
+
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -159,7 +160,7 @@ class LikeCommands(commands.Cog):
         
     async def _send_api_error(self, ctx):
         embed = discord.Embed(title="⚠️ Service Unavailable", description="দয়া করে অপেক্ষা  করেন জয় ভাই ঠিক করবে , চিন্তা করবেন  নাহ .", color=0xF39C12)
-        embed.add_field(name="Solution", value="Try again in a few minutes.", inline=False)
+        embed.add_field(name="Solution", value="কয়েক মিনিটের মধ্যে আবার চেষ্টা করুন।.", inline=False)
         await ctx.send(embed=embed, ephemeral=True)
 
     async def _send_error_embed(self, ctx, title, description, ephemeral=True):
